@@ -2,9 +2,10 @@ package com.fvf.threadbasic;
 
 /**
  * 线程基本操作-新建
- * 两种实现方式
+ * 三种实现方式
+ *多个构造函数
+ *当传递 runnable 实例 init 方法会首先执行改 runnable 的 run 方法
  * 
- * @author forj
  *
  */
 public class NewThreadTest {
@@ -43,4 +44,10 @@ public class NewThreadTest {
 		t2.start();
 	}
 
+	class Thread3 extends Thread{
+		@Override
+		public void run() {
+			System.out.println("thread");
+		}
+	}
 }
