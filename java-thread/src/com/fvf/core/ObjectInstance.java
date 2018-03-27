@@ -1,7 +1,7 @@
-package com.fvf.threadbasic;
+package com.fvf.core;
 
 /**
- * java 实例化对象方法
+ * java 实例化对象方式
  * 
  * @author forj
  * 
