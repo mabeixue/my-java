@@ -19,5 +19,6 @@ public class RunOrStart {
 		t.run();
 		// start 创建新线程 并执行 run 方法
 		t.start();
+		t.start();//IllegalThreadStateException
 	}
 }

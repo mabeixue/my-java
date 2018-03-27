@@ -2,7 +2,7 @@ package com.fvf.threadbasic;
 
 /**
  * 线程的基本操作-终止
- * @author forj
+ * Thread.stop 方法不推荐使用，它会释放所有 monitor （锁），会导致多线程问题
  *
  */
 public class StopThreadTest {
@@ -13,16 +13,23 @@ public class StopThreadTest {
 			public void run() {
 				while(true) {
 					Thread.yield();
+					System.out.println("123");
 					if (Thread.currentThread().isInterrupted()) {
 						System.out.println("interrupted!");
 						break;
 					}
-					Thread.yield();
+				}
+				try {
+					Thread.sleep(10);
+					Thread.currentThread().stop();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
 			}
 			
 		});
-//		t1.stop();
-		t1.interrupt();
+		t1.start();
+		
+//		t1.interrupt();
 	}
 }
