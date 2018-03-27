@@ -19,12 +19,6 @@ public class StopThreadTest {
 						break;
 					}
 				}
-				try {
-					Thread.sleep(10);
-					Thread.currentThread().stop();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
 			}
 			
 		});
