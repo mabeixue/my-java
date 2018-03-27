@@ -5,6 +5,7 @@ package com.fvf.threadbasic;
  * <p>
  * 	1. 调用 run 方法表示在当前线程执行 run 方法
  * 	2. 调用 start 方法会开启新线程来执行 run 方法
+ * 
  * </p>
  *
  */
